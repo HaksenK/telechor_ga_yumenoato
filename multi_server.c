@@ -304,7 +304,6 @@ void accept_request(){
         exit(EXIT_FAILURE);
       }
 
-      struct sharebuf bufs[MAX_PARTICIPANTS];
       if(first_synchronize_buffer() < 0) {
         perror("first_synchronize_buffer");
         exit(EXIT_FAILURE);

@@ -44,7 +44,6 @@ int request(char ip_address[]){
   send(req_sock, "req", 3*sizeof(char), 0);
 
   while(resplen == 0){
-    socklen_t addrlen = sizeof(addr);
     if((resplen = recv(req_sock, &response, sizeof(response), 0)) < 0){
       perror("recv");
       return -1;
